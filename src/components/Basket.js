@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Basket() {
+function Basket({ cartItems, onAdd }) {
   return (
     <aside className="block col-1">
-      Basket
       <h2> Cart Items</h2>
+      <div>{cartItems.length === 0 && <div>Cart is empty</div>}</div>
     </aside>
   );
 }

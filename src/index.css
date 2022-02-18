@@ -44,6 +44,7 @@ a {
 img.small {
   max-height: 8rem;
   width: 300px;
+  object-fit: cover;
 }
 button {
   font-size: 0.8rem;
