@@ -70,3 +70,13 @@ button.badge {
   color: #ffffff;
   width: 1.5rem;
 }
+
+.cart-sign-in {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+.cart-sign-in button {
+  width: 24px;
+}
+

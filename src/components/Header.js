@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-function Header() {
+function Header({ countCartItems }) {
   return (
     <header className="row block center">
       <div>
@@ -8,8 +8,9 @@ function Header() {
           <h1>Small Shopping Cart</h1>
         </a>
       </div>
-      <div>
-        <a href="#/cart">Cart</a> <a href="#/signin">Sign In</a>
+      <div className="cart-sign-in">
+        <a href="#/cart">Cart {countCartItems ? <button>{countCartItems}</button> : ''}</a>{' '}
+        <a href="#/signin">Sign In</a>
       </div>
     </header>
   );

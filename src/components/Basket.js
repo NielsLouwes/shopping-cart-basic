@@ -49,6 +49,10 @@ function Basket({ cartItems, onAdd, onRemove }) {
               <strong>${totalPrice.toFixed(2)}</strong>
             </div>
           </div>
+          <hr></hr>
+          <div className="row">
+            <button onClick={() => alert('Implement checkout')}>Checkout</button>
+          </div>
         </>
       )}
     </aside>
