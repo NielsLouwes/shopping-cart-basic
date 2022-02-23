@@ -85,3 +85,30 @@ a {
   font-weight: bolder;
   font-size: 1.2rem;
 }
+
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.shopping-cart-button {
+  height: 40px;
+  width: 75%;
+  margin-left: 45px;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+hr {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.cart-amount {
+  display: flex;
+}
+
+.cart-item-quanity {
+  margin-right: 5px;
+}

@@ -1,6 +1,5 @@
 import Header from './components/Header';
 import Main from './components/Main';
-import Basket from './components/Basket';
 import data from './data';
 import { useState } from 'react';
 
@@ -32,10 +31,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header countCartItems={cartItems.length}></Header>
+      <Header
+        countCartItems={cartItems.length}
+        cartItems={cartItems}
+        onAdd={onAdd}
+        onRemove={onRemove}></Header>
       <div className="row">
         <Main products={products} onAdd={onAdd}></Main>
-        <Basket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Basket>
       </div>
     </div>
   );
