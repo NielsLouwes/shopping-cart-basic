@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Divider from '@mui/material/Divider';
+import { useNavigate } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -25,11 +26,12 @@ function Header({ countCartItems, cartItems }) {
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 50;
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
+  const navigate = useNavigate();
 
   return (
     <header className="row block center">
       <div>
-        <a href="#/">
+        <a href="/main">
           <h1>Random webshop</h1>
         </a>
       </div>
@@ -85,7 +87,7 @@ function Header({ countCartItems, cartItems }) {
                 </div>
               </div>
               <div className="row">
-                <button className="shopping-cart-button" onClick={() => console.log('testing')}>
+                <button className="shopping-cart-button" onClick={() => navigate('/shopping-cart')}>
                   Shopping Cart
                 </button>
               </div>

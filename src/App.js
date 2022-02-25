@@ -1,8 +1,10 @@
 import Header from './components/Header';
 import Main from './components/Main';
+import ShoppingCart from './components/ShoppingCart';
 import data from './data';
 import { useState } from 'react';
 import { Checkbox } from '@mui/material';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const { products } = data;
@@ -32,6 +34,10 @@ function App() {
 
   return (
     <div className="App">
+      <Routes>
+        <Route path="/main" element={<Main />} />
+        <Route path="/shopping-cart" element={<ShoppingCart />} />
+      </Routes>
       <Header
         countCartItems={cartItems.length}
         cartItems={cartItems}
