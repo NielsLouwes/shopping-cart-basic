@@ -65,28 +65,34 @@ function Header({ countCartItems, cartItems }) {
               <div className="col02 text-right">${item.price.toFixed(2)}</div>
             </div>
           ))}
-          <hr></hr>
-          <div className="row">
-            <div className="col-2">Total Price</div>
-            <div className="col-1 text-right">${itemsPrice.toFixed(2)}</div>
-          </div>
-          <div className="row">
-            <div className="col-2">Shipping</div>
-            <div className="col-1 text-right">${shippingPrice.toFixed(2)}</div>
-          </div>
-          <div className="row">
-            <div className="col-2">
-              <strong>Grand Total</strong>
-            </div>
-            <div className="col-1 text-right">
-              <strong>${totalPrice.toFixed(2)}</strong>
-            </div>
-          </div>
-          <div className="row">
-            <button className="shopping-cart-button" onClick={() => alert('Implement checkout')}>
-              Shopping Cart
-            </button>
-          </div>
+          {cartItems.length !== 0 && (
+            <>
+              <hr></hr>
+              <div className="row">
+                <div className="col-2">Total Price</div>
+                <div className="col-1 text-right">${itemsPrice.toFixed(2)}</div>
+              </div>
+              <div className="row">
+                <div className="col-2">Shipping</div>
+                <div className="col-1 text-right">${shippingPrice.toFixed(2)}</div>
+              </div>
+              <div className="row">
+                <div className="col-2">
+                  <strong>Grand Total</strong>
+                </div>
+                <div className="col-1 text-right">
+                  <strong>${totalPrice.toFixed(2)}</strong>
+                </div>
+              </div>
+              <div className="row">
+                <button
+                  className="shopping-cart-button"
+                  onClick={() => alert('Implement checkout')}>
+                  Shopping Cart
+                </button>
+              </div>
+            </>
+          )}
         </Box>
       </Modal>
     </header>
