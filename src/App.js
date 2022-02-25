@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import data from './data';
 import { useState } from 'react';
+import { Checkbox } from '@mui/material';
 
 function App() {
   const { products } = data;
@@ -38,6 +39,7 @@ function App() {
         onRemove={onRemove}></Header>
       <div className="row">
         <Main products={products} onAdd={onAdd}></Main>
+        <Checkbox />
       </div>
     </div>
   );

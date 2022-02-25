@@ -85,9 +85,7 @@ function Header({ countCartItems, cartItems }) {
                 </div>
               </div>
               <div className="row">
-                <button
-                  className="shopping-cart-button"
-                  onClick={() => alert('Implement checkout')}>
+                <button className="shopping-cart-button" onClick={() => console.log('testing')}>
                   Shopping Cart
                 </button>
               </div>
