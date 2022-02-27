@@ -2,13 +2,17 @@ import Header from './components/Header';
 import Main from './components/Main';
 import ShoppingCart from './components/ShoppingCart';
 import data from './data';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Checkbox } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const { products } = data;
   const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);

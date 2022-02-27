@@ -46,6 +46,19 @@ img.small {
   width: 300px;
   object-fit: cover;
 }
+.button {
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  margin: 0.1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #404040 solid;
+  background-color: #f0c040;
+  width: 100%;
+  cursor: pointer;
+  width: 25px;
+  text-align: center;
+}
+
 button {
   font-size: 0.8rem;
   padding: 0.2rem;
@@ -55,6 +68,8 @@ button {
   background-color: #f0c040;
   width: 100%;
   cursor: pointer;
+ 
+  text-align: center;
 }
 button.add {
   background-color: #40c0f0;
@@ -74,7 +89,9 @@ button.badge {
 .cart-sign-in {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 150px;
+  cursor: pointer;
 }
 .cart-sign-in button {
   width: 24px;

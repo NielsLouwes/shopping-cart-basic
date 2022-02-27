@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Divider from '@mui/material/Divider';
 import { useNavigate } from 'react-router-dom';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const style = {
   position: 'absolute',
@@ -36,10 +37,9 @@ function Header({ countCartItems, cartItems }) {
         </a>
       </div>
       <div className="cart-sign-in">
-        <a href="#/cart" onClick={handleOpen}>
-          Cart {countCartItems ? <button>{countCartItems}</button> : ''}
-        </a>{' '}
-        <a href="#/signin">Sign In</a>
+        <ShoppingCartOutlinedIcon onClick={handleOpen} />
+        {countCartItems ? <div className="button">{countCartItems}</div> : ''}
+        <p>Sign In</p>
       </div>
       <Modal
         open={open}
