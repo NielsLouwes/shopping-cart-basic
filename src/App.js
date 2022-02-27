@@ -6,9 +6,11 @@ import { useEffect, useState } from 'react';
 import { Checkbox } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
 
+const cartItemsFromLocalStorage = JSON.parse(localStorage.getItem('cart') || '[]');
+
 function App() {
   const { products } = data;
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(cartItemsFromLocalStorage);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
