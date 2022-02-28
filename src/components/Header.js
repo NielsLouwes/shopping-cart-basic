@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Divider from '@mui/material/Divider';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const style = {
@@ -39,7 +39,7 @@ function Header({ countCartItems, cartItems }) {
       <div className="cart-sign-in">
         <ShoppingCartOutlinedIcon onClick={handleOpen} />
         {countCartItems ? <div className="button">{countCartItems}</div> : ''}
-        <p>Sign In</p>
+        <Link to="/login">Sign In</Link>
       </div>
       <Modal
         open={open}
@@ -87,9 +87,9 @@ function Header({ countCartItems, cartItems }) {
                 </div>
               </div>
               <div className="row">
-                <button className="shopping-cart-button" onClick={() => navigate('/shopping-cart')}>
-                  Shopping Cart
-                </button>
+                <button
+                  className="shopping-cart-button"
+                  onClick={() => navigate('/shopping-cart')}></button>
               </div>
             </>
           )}
