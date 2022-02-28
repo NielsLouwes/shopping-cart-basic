@@ -37,7 +37,7 @@ function Header({ countCartItems, cartItems }) {
         </a>
       </div>
       <div className="cart-sign-in">
-        <ShoppingCartOutlinedIcon onClick={handleOpen} />
+        <ShoppingCartOutlinedIcon onClick={handleOpen} title="cartIcon" />
         {countCartItems ? <div className="button">{countCartItems}</div> : ''}
         <Link to="/login">Sign In</Link>
       </div>
