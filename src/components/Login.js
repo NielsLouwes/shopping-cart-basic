@@ -1,18 +1,18 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 
 function Login() {
   // const [invalidPassword, setInvalidPassword] = useState(false);
   // const { register, handleSubmit } = useForm();
   // const navigate = useNavigate();
+  // const [loggedIn, setLoggedIn] = useState(false);
 
-  // const onSubit = () => {
-  //   // setInvalidPassword(false);
-  //   const myStorage = window.localStorage;
-  //   if (password === 'password' && email === 'email.nl') {
-  //     myStorage.setItem('loggedIn', 'true');
-  //   }
-  // };
+  const onSubmit = () => {
+    // setInvalidPassword(false);
+    setLoggedIn(true);
+    const myStorage = window.localStorage;
+    myStorage.setItem('loggedIn', 'true');
+  };
 
   //TODO
 
@@ -37,7 +37,9 @@ function Login() {
               placeholder="Password"
             /> */}
             <input type="password" name="pswd" placeholder="Password" required="true" />
-            <button type="submit">Login</button>
+            <button onSubmit={onSubmit} type="submit">
+              Login
+            </button>
           </form>
         </div>
       </div>
