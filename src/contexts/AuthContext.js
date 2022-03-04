@@ -4,7 +4,7 @@ const AuthContext = createContext();
 
 function AuthContext() {
     return (
-        
+        <></>
     )
 }
 
